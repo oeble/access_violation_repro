@@ -1,0 +1,45 @@
+[package]
+name = "vprog"
+version = "0.1.0"
+description = "Created with Anchor"
+edition = "2021"
+rust-version = "1.68"
+
+[lib]
+crate-type = ["cdylib", "lib"]
+name = "vprog"
+
+[features]
+no-entrypoint = []
+no-idl = []
+no-log-ix-name = []
+cpi = ["no-entrypoint"]
+edition2021 = []
+
+[dependencies]
+anchor-lang.workspace = true
+anchor-spl.workspace = true
+spl-token.workspace = true
+bytemuck.workspace = true
+
+[dev-dependencies]
+solana-sdk.workspace = true
+solana-program-test.workspace = true
+solana-logger.workspace = true
+spl-associated-token-account.workspace = true
+serde_json.workspace = true
+serde.workspace = true
+sha2 = "0.10.1"
+proptest = "1.0"
+proptest-derive = "0.4.0"
+thiserror = "1.0.30"
+log = "0.4.14"
+arrayref = "0.3.6"
+colour = "0.7.0"
+more-asserts = "0.3.0"
+quickcheck = "1"
+quickcheck_macros = "1"
+test-case = "3.0.0"
+rand = "0.8"
+chrono = "0.4.23"
+itertools = "0.13.0"
